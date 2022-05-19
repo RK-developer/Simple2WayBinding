@@ -1,10 +1,10 @@
 const scope2WayBind = (function() {
-    const dataBindEles = document.querySelectorAll('input[data-bind]');
+    const dataBindEles = document.querySelectorAll('input[sdb-bind]');
     var scope = (function() {
         const data = {};
         const setDataToElement = (postDataBindProps, postDataBindValue) => {
-            document.querySelector(`[data-bind=${postDataBindProps}]`).value = postDataBindValue;
-            const dataBindtext = document.querySelectorAll(`[data-bind-text=${postDataBindProps}]`);
+            document.querySelector(`[sdb-bind=${postDataBindProps}]`).value = postDataBindValue;
+            const dataBindtext = document.querySelectorAll(`[sdb-bind-text=${postDataBindProps}]`);
             dataBindtext?.forEach(element => {
                 element.textContent = postDataBindValue
             });
@@ -34,7 +34,7 @@ const scope2WayBind = (function() {
         element.addEventListener('keyup',event => {
             const ele = element
             event.preventDefault();
-            let postDataBindProps = ele.getAttribute('data-bind');
+            let postDataBindProps = ele.getAttribute('sdb-bind');
             let PostDataBindValue = event.currentTarget.value;
             scope.setData(postDataBindProps, PostDataBindValue);
         });
