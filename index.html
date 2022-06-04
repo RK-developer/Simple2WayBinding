@@ -19,7 +19,20 @@
             <button id="resetButton">Click here to Reset</button>
         </div>
     </div>
-    <script type="text/javascript" src="./js/Simple2WayDataBinding.js"></script>
-    <script type="text/javascript" src="./js/index.js"></script>
+    <br/>
+    <div>
+        <div>
+            <input type="text" sdb-bind="textIp1">
+        </div>
+        <div>Data will Update here:</div>
+        <p sdb-bind-text="textIp1"></p>
+
+        <div>
+            <p>Change data will change input and text values:</p>
+            <button id="resetButton2">Click here to Reset</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="./build//Simple2WayDataBinding.js"></script>
+    <script type="text/javascript" src="./build/s2d-index.js"></script>
 </body>
 </html>

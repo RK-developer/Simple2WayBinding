@@ -1,10 +1,11 @@
-const scope2WayBind = (function() {
+const scope2WayBind = (function(props={}) {
+    const {rootElementId} = props
     const dataBindEles = document.querySelectorAll('input[sdb-bind]');
     var scope = (function() {
         const data = {};
         const setDataToElement = (postDataBindProps, postDataBindValue) => {
             document.querySelector(`[sdb-bind=${postDataBindProps}]`).value = postDataBindValue;
-            const dataBindtext = document.querySelectorAll(`[sdb-bind-text=${postDataBindProps}]`);
+            const dataBindtext = document.querySelectorAll(`${rootElementId ? '#'+rootElementId+' ':''}[sdb-bind-text=${postDataBindProps}]`);
             dataBindtext?.forEach(element => {
                 element.textContent = postDataBindValue
             });
@@ -40,4 +41,4 @@ const scope2WayBind = (function() {
         });
     }
     return scope;
-})();
+});
