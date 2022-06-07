@@ -11,7 +11,7 @@
 #### STEP 3: Simply create instance the imported method to after domContentLoaded or Jquery ready().
 Global for all element `var simple2WayBindInstance =  simple2WayBind();`
 #
-wrapper for specific element `var simple2WayBindInstance =  simple2WayBind("#rootId");`
+wrapper for specific element `var simple2WayBindInstance =  simple2WayBind({rootElementId: 'rootId'});`
 #
 #### STEP 4: Add the required attributes(`sdb-bind`, `sdb-bind-text`) to elements
 ### `sdb-bind="attrName"` && `sdb-bind-text="attrName"` both attribute should have same name
