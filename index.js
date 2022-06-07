@@ -52,3 +52,4 @@ var scope2WayBind = function scope2WayBind() {
 
   return scope;
 };
+module.exports = scope2WayBind;
