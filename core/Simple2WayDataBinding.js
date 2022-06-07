@@ -1,4 +1,4 @@
-const scope2WayBind = (function(props={}) {
+const simple2WayBind = (function(props={}) {
     const {rootElementId} = props
     const dataBindEles = document.querySelectorAll('input[sdb-bind]');
     var scope = (function() {

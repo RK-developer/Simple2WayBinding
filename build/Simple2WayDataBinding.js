@@ -1,6 +1,6 @@
 "use strict";
 
-var scope2WayBind = function scope2WayBind() {
+var simple2WayBind = function simple2WayBind() {
   var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var rootElementId = props.rootElementId;
   var dataBindEles = document.querySelectorAll('input[sdb-bind]');
